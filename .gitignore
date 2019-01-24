@@ -1,0 +1,8 @@
+### Gradle ###
+.gradle
+/out/
+/build/
+
+/dependencies/
+/docker/server/dependencies/
+/docker/server/reactor-netty-example.jar

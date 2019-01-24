@@ -29,9 +29,14 @@ java -cp "build/libs/reactor-netty-example.jar:dependencies/*" server.Server <po
 
 If ` <port number>` is omitted, a default value is used.
 
+You can test the server using `curl`. For instance, if the default port of `8080` is used, issue this command:
+```terminal
+curl --http2-prior-knowledge http://127.0.0.1:8080 -verbose
+```
+
 ### Running the Client
 
-*Client not yet supported*
+*Client not yet implemented*
 
 After building, issue the following command (typically in a separate terminal to the server):
 ```terminal
@@ -79,7 +84,7 @@ This will run the server in a docker container using port 8081 and will map that
 
 If you run the client specifying the same port, it should print the same output as before.
 ```terminal
-java -cp "build/libs/rsocket-example.jar:dependencies/*" client.Client 8081
+java -cp "build/libs/reactor-netty-example.jar:dependencies/*" client.Client 8081
 ```
 ```terminal
 Echo: Hello
